@@ -1,44 +1,120 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
+<!-- Mirrored from webapplayers.com/inspinia_admin-v2.9.3/landing.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 May 2020 13:28:30 GMT -->
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>INSPINIA - Landing Page</title>
+    <!-- Bootstrap core CSS -->
+    <link href="~/Content/Inspinia/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animation CSS -->
+    <link href="~/Content/Inspinia/css/animate.css" rel="stylesheet">
+    <link href="~/Content/Inspinia/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="~/Content/Inspinia/css/style.css" rel="stylesheet">
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+<body id="page-top" class="landing-page no-skin-config">
+    <div class="navbar-wrapper">
+        <nav class="navbar navbar-default navbar-fixed-top navbar-expand-md" role="navigation">
+            <div class="container">
+                <a class="navbar-brand" href="index-2.html">WELCOME FRIENDS</a>
+                <div class="navbar-header page-scroll">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+                        
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="nav-link page-scroll" href="#page-top">Home</a></li>
+                        <li><a class="nav-link page-scroll" href="#features">Features</a></li>
+                        <li><a class="nav-link page-scroll" href="#team">Team</a></li>
+                        <li><a class="nav-link page-scroll" href="#testimonials">Testimonials</a></li>
+                        <li><a class="nav-link page-scroll" href="#pricing">Pricing</a></li>
+                        <li><a class="nav-link page-scroll" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
+        </nav>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
-
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    @RenderBody()
+    <hr />
+
+    <!-- Mainly scripts -->
+    <script src="~/Content/Inspinia/js/jquery-2.1.1.js"></script>
+    <script src="~/Content/Inspinia/js/jquery-3.1.1.min.js"></script>
+    <script src="~/Content/Inspinia/js/popper.min.js"></script>
+    <script src="~/Content/Inspinia/js/bootstrap.js"></script>
+    <script src="~/Content/Inspinia/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="~/Content/Inspinia/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- Custom and plugin javascript -->
+    <script src="~/Content/Inspinia/js/inspinia.js"></script>
+    <script src="~/Content/Inspinia/js/plugins/pace/pace.min.js"></script>
+    <script src="~/Content/Inspinia/js/plugins/wow/wow.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            $('body').scrollspy({
+                target: '#navbar',
+                offset: 80
+            });
+
+            // Page scrolling feature
+            $('a.page-scroll').bind('click', function (event) {
+                var link = $(this);
+                $('html, body').stop().animate({
+                    scrollTop: $(link.attr('href')).offset().top - 50
+                }, 500);
+                event.preventDefault();
+                $("#navbar").collapse('hide');
+            });
+        });
+
+        var cbpAnimatedHeader = (function () {
+            var docElem = document.documentElement,
+                header = document.querySelector('.navbar-default'),
+                didScroll = false,
+                changeHeaderOn = 150;
+            function init() {
+                window.addEventListener('scroll', function (event) {
+                    if (!didScroll) {
+                        didScroll = true;
+                        setTimeout(scrollPage, 150);
+                    }
+                }, false);
+            }
+            function scrollPage() {
+                var sy = scrollY();
+                if (sy >= changeHeaderOn) {
+                    $(header).addClass('navbar-scroll')
+                }
+                else {
+                    $(header).removeClass('navbar-scroll')
+                }
+                didScroll = false;
+            }
+            function scrollY() {
+                return window.pageYOffset || docElem.scrollTop;
+            }
+            init();
+
+        })();
+
+        // Activate WOW.js plugin for animation on scrol
+        new WOW().init();
+
+    </script>
 </body>
+<!-- Mirrored from webapplayers.com/inspinia_admin-v2.9.3/landing.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 May 2020 13:29:31 GMT -->
 </html>
+
+
