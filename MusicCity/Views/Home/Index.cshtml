@@ -2,8 +2,6 @@
     ViewBag.Title = "Home Page";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-
 <div id="inSlider" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#inSlider" data-slide-to="0" class="active"></li>
@@ -18,11 +16,12 @@
                         Optimal<br />
                         Nation<br />
                     </h1><br />
-                    <p>We welcome You to the City Of Music</p>
+                    <p>We Welcome You To The City Of Music</p>
                     <p>
                         <br /><br />
 
-                        <a class="btn btn-lg btn-primary" href="#" role="button">Sign Up</a>
+                        <a class="btn btn-lg btn-primary" href="@Url.Action("Register", "Account")" role="button">Sign Up</a>
+                        <a class="btn btn-lg btn-primary" href="@Url.Action("Login", "Account")" role="button">Login</a>
                     </p>
 
                 </div>
@@ -31,21 +30,19 @@
                 </div>
             </div>
             <!-- Set background for slide in css -->
-            <img src="~/Content/Inspinia/img/landing/header_one.jpg" />
-            
+            <img src="~/Content/Inspinia/img/landing/resize-15893865991430802841bannertitle4.jpg" />
         </div>
         <div class="carousel-item">
             <div class="container">
                 <div class="carousel-caption blank">
-                    <h1>We create meaningful <br /> interfaces that inspire.</h1>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                    <h1>We create awesome instrumentals <br /> Awesome jingles.</h1>
+                    <p>We Write And Compose All Genres Of Original And Parody Songs.</p>
+                    <a class="btn btn-lg btn-primary" href="@Url.Action("Register", "Account")" role="button">Sign Up</a>
+                    <a class="btn btn-lg btn-primary" href="@Url.Action("Login", "Account")" role="button">Login</a>
                 </div>
             </div>
             <!-- Set background for slide in css -->
-            <img src="~/Content/Inspinia/img/landing/header_two.jpg" />
-         
-            @*<div class="header-back two"></div>*@
+            <img src="~/Content/Inspinia/img/landing/resize-15893865431048617657bannertitle1.jpg" />
         </div>
     </div>
 
@@ -62,24 +59,24 @@
 <section id="features" class="container services">
     <div class="row">
         <div class="col-sm-3">
-            <h2>Full responsive</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
+            <h2 style="color:yellowgreen">ROYALTY FREE MUSIC</h2>
+            <p>Here are free sounds from different genres to get you grooving all day.</p>
+            <p><a class="ladda-button btn btn-info" href="@Url.Action("Index", "Instrumental",new {area="Admin"})" role="button">MUSIC &raquo;</a></p>
         </div>
         <div class="col-sm-3">
-            <h2>LESS/SASS Files</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
+            <h2 style="color:yellowgreen">SHOP</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+            <p><a class="ladda-button btn btn-info" href="@Url.Action("Index", "shop",new {area="Admin"})" role="button">SHOP &raquo;</a></p>
         </div>
         <div class="col-sm-3">
-            <h2>6 Charts Library</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
+            <h2 style="color:yellowgreen">TRAP/AFRO/COUNTRY</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+            <p><a class="ladda-button btn btn-info" href="@Url.Action("Index", "Instrumental",new {area="Admin"})" role="button">TRAP &raquo;</a></p>
         </div>
         <div class="col-sm-3">
-            <h2>Advanced Forms</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
+            <h2 style="color:yellowgreen">VIDEOS</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+            <p><a class="ladda-button btn btn-info" href="@Url.Action("Index", "Instrumental",new {area="Admin"})" role="button">VIDEOS &raquo;</a></p>
         </div>
     </div>
 </section>
@@ -193,59 +190,6 @@
         </div>
     </div>
 </section>
-
-@*<section class="timeline gray-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="navy-line"></div>
-                <h1>Our workflow</h1>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>
-            </div>
-        </div>
-        <div class="row features-block">
-            <div class="col-lg-12">
-                <div id="vertical-timeline" class="vertical-container light-timeline center-orientation">
-                    <div class="vertical-timeline-block">
-                        <div class="vertical-timeline-icon navy-bg">
-                            <i class="fa fa-briefcase"></i>
-                        </div>
-                        <div class="vertical-timeline-content">
-                            <h2>Meeting</h2>
-                            <p>
-                                Conference on the sales results for the previous year. Monica please examine sales trends in marketing and products. Below please find the current status of the sale.
-                            </p>
-                            <a href="#" class="btn btn-xs btn-primary"> More info</a>
-                            <span class="vertical-date"> Today <br /> <small>Dec 24</small> </span>
-                        </div>
-                    </div>
-                    <div class="vertical-timeline-block">
-                        <div class="vertical-timeline-icon navy-bg">
-                            <i class="fa fa-file-text"></i>
-                        </div>
-                        <div class="vertical-timeline-content">
-                            <h2>Decision</h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
-                            <a href="#" class="btn btn-xs btn-primary"> More info</a>
-                            <span class="vertical-date"> Tomorrow <br /> <small>Dec 26</small> </span>
-                        </div>
-                    </div>
-                    <div class="vertical-timeline-block">
-                        <div class="vertical-timeline-icon navy-bg">
-                            <i class="fa fa-cogs"></i>
-                        </div>
-                        <div class="vertical-timeline-content">
-                            <h2>Implementation</h2>
-                            <p>Go to shop and find some products. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. </p>
-                            <a href="#" class="btn btn-xs btn-primary"> More info</a>
-                            <span class="vertical-date"> Monday <br /> <small>Jan 02</small> </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>*@
 <section id="testimonials" class="navy-section testimonials" style="margin-top: 0">
     <div class="container">
         <div class="row">
@@ -326,161 +270,6 @@
         </div>
     </div>
 </section>
-
-@*<section class="features">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="navy-line"></div>
-                <h1>More and more extra great feautres</h1>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-5 col-lg-offset-1 features-text">
-                <small>INSPINIA</small>
-                <h2>Perfectly designed </h2>
-                <i class="fa fa-bar-chart big-icon float-right"></i>
-                <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with.</p>
-            </div>
-            <div class="col-lg-5 features-text">
-                <small>INSPINIA</small>
-                <h2>Perfectly designed </h2>
-                <i class="fa fa-bolt big-icon float-right"></i>
-                <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with.</p>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-5 col-lg-offset-1 features-text">
-                <small>INSPINIA</small>
-                <h2>Perfectly designed </h2>
-                <i class="fa fa-clock-o big-icon float-right"></i>
-                <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with.</p>
-            </div>
-            <div class="col-lg-5 features-text">
-                <small>INSPINIA</small>
-                <h2>Perfectly designed </h2>
-                <i class="fa fa-users big-icon float-right"></i>
-                <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with.</p>
-            </div>
-        </div>
-    </div>
-</section>*@
-
-<section id="pricing" class="pricing">
-    <div class="container">
-        <div class="row m-b-lg">
-            <div class="col-lg-12 text-center">
-                <div class="navy-line"></div>
-                <h1>App Pricing</h1>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 wow zoomIn">
-                <ul class="pricing-plan list-unstyled">
-                    <li class="pricing-title">
-                        Basic
-                    </li>
-                    <li class="pricing-desc">
-                        Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.
-                    </li>
-                    <li class="pricing-price">
-                        <span>$16</span> / month
-                    </li>
-                    <li>
-                        Dashboards
-                    </li>
-                    <li>
-                        Projects view
-                    </li>
-                    <li>
-                        Contacts
-                    </li>
-                    <li>
-                        Calendar
-                    </li>
-                    <li>
-                        AngularJs
-                    </li>
-                    <li>
-                        <a class="btn btn-primary btn-xs" href="#">Signup</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-lg-4 wow zoomIn">
-                <ul class="pricing-plan list-unstyled selected">
-                    <li class="pricing-title">
-                        Standard
-                    </li>
-                    <li class="pricing-desc">
-                        Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.
-                    </li>
-                    <li class="pricing-price">
-                        <span>$22</span> / month
-                    </li>
-                    <li>
-                        Dashboards
-                    </li>
-                    <li>
-                        Projects view
-                    </li>
-                    <li>
-                        Contacts
-                    </li>
-                    <li>
-                        Calendar
-                    </li>
-                    <li>
-                        AngularJs
-                    </li>
-                    <li>
-                        <strong>Support platform</strong>
-                    </li>
-                    <li class="plan-action">
-                        <a class="btn btn-primary btn-xs" href="#">Signup</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-lg-4 wow zoomIn">
-                <ul class="pricing-plan list-unstyled">
-                    <li class="pricing-title">
-                        Premium
-                    </li>
-                    <li class="pricing-desc">
-                        Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.
-                    </li>
-                    <li class="pricing-price">
-                        <span>$160</span> / month
-                    </li>
-                    <li>
-                        Dashboards
-                    </li>
-                    <li>
-                        Projects view
-                    </li>
-                    <li>
-                        Contacts
-                    </li>
-                    <li>
-                        Calendar
-                    </li>
-                    <li>
-                        AngularJs
-                    </li>
-                    <li>
-                        <a class="btn btn-primary btn-xs" href="#">Signup</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="row m-t-lg">
-            <div class="col-lg-12 text-center m-t-lg">
-                <p>*Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. <span class="navy">Various versions</span>  have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-            </div>
-        </div>
-    </div>
-</section>
 <section id="contact" class="gray-section contact">
     <div class="container">
         <div class="row m-b-lg">
@@ -494,9 +283,9 @@
             <div class="col-lg-3 ">
                 <address>
                     <strong><span class="navy">Company name, Inc.</span></strong><br />
-                    795 Folsom Ave, Suite 600<br />
-                    San Francisco, CA 94107<br />
-                    <abbr title="Phone">P:</abbr> (123) 456-7890
+                    Lagos<br />
+                    Nigeria, CA 94107<br />
+                    <abbr title="Phone">P:</abbr> (234) 705-7890-0908
                 </address>
             </div>
             <div class="col-lg-4">
@@ -526,7 +315,7 @@
         </div>
         <div class="row">
             <div class="col-lg-12 text-center m-t-lg m-b-lg">
-                <p><strong>&copy; 2015 Company Name</strong><br /> consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                <p><strong>&copy; 2020 Company Name</strong><br /> consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
             </div>
         </div>
     </div>
